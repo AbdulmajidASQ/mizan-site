@@ -1,0 +1,179 @@
+/* ============================================
+   MIZAN — Shared design system
+   Editorial / institutional aesthetic
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root{
+  /* Palette — paper & ink */
+  --paper: #f4f1ea;           /* warm off-white, base surface */
+  --paper-2: #ece7dc;          /* slightly deeper card */
+  --paper-3: #e2dcce;          /* divider / subtle panel */
+  --ink: #1a1a1a;              /* primary text */
+  --ink-2: #3a3a38;            /* secondary text */
+  --ink-3: #6b6b66;            /* tertiary / meta */
+  --ink-4: #a09e96;            /* dim, hints */
+  --rule: #cfc8b8;             /* hairlines */
+  --rule-2: #b8b1a0;
+
+  /* Single dignified accent — deep forest green */
+  --accent: #1f4d3a;
+  --accent-2: #2e6b52;
+  --accent-ink: #14382a;
+  --accent-wash: rgba(31,77,58,0.06);
+
+  /* Neutral signal colors — muted */
+  --pos: #2e6b52;
+  --neg: #8a2f2f;
+  --warn: #8a6a2f;
+
+  /* Dark inversion for live ledger only */
+  --ink-dark: #121210;
+  --paper-dark: #ecebe5;
+
+  /* Type */
+  --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:var(--accent);color:var(--paper)}
+a{color:inherit;text-decoration:none}
+
+/* ==================== NAV ==================== */
+.apx-nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(244,241,234,0.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rule);
+}
+.apx-nav-inner{
+  max-width:1240px;margin:0 auto;
+  padding:18px 32px;
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:32px;
+}
+.apx-brand{display:flex;align-items:center;gap:14px}
+.apx-brand-ar{font-family:'Aref Ruqaa','Amiri','Noto Naskh Arabic',serif;font-weight:700;font-size:30px;color:#1f4d3a;line-height:1;unicode-bidi:isolate;display:inline-block;padding-bottom:4px}
+.apx-brand-latin{font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:500;font-size:26px;color:#1a1a1a;line-height:1;letter-spacing:.005em;padding-left:14px;border-left:1px solid #cfc8b8}
+.apx-brand-meta{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#a09e96;padding-left:12px;border-left:1px solid #cfc8b8}
+@media(max-width:720px){.apx-brand-meta,.apx-brand-latin{display:none}}
+.apx-nav-links{display:flex;gap:4px;align-items:center}
+.apx-nav-links a{
+  font-size:12.5px;font-weight:500;
+  color:var(--ink-3);
+  padding:8px 14px;
+  transition:color .15s;
+  letter-spacing:.01em;
+}
+.apx-nav-links a:hover{color:var(--ink)}
+.apx-nav-links a.active{color:var(--accent);font-weight:600}
+
+/* ==================== TYPE ==================== */
+.kicker{
+  font-family:var(--sans);
+  font-size:11px;font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--accent);
+  display:inline-block;
+}
+.kicker::before{
+  content:'';display:inline-block;
+  width:18px;height:1px;
+  background:var(--accent);
+  vertical-align:middle;
+  margin-right:10px;margin-bottom:3px;
+}
+.display{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(40px,5.5vw,68px);
+  line-height:1.05;
+  letter-spacing:-.015em;
+  color:var(--ink);
+}
+.display em{font-style:italic;color:var(--accent-ink)}
+.display-sm{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(28px,3.5vw,42px);
+  line-height:1.15;
+  letter-spacing:-.01em;
+  color:var(--ink);
+}
+.display-sm em{font-style:italic;color:var(--accent-ink)}
+.lede{
+  font-family:var(--serif);
+  font-size:clamp(19px,2vw,22px);
+  line-height:1.55;
+  color:var(--ink-2);
+  font-weight:300;
+  max-width:38em;
+}
+.section-label{
+  font-family:var(--sans);
+  font-size:10.5px;font-weight:600;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  padding-bottom:10px;
+  border-bottom:1px solid var(--rule);
+  margin-bottom:28px;
+  display:flex;justify-content:space-between;align-items:baseline;
+}
+.section-label .num{color:var(--ink-4);font-weight:500}
+
+/* ==================== LAYOUT ==================== */
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+.measure{max-width:680px;margin:0 auto}
+.measure-wide{max-width:820px;margin:0 auto}
+
+.rule{height:1px;background:var(--rule);margin:0}
+.rule-accent{height:1px;background:var(--accent);width:48px;margin:28px 0}
+
+/* ==================== FOOTER ==================== */
+.apx-foot{
+  margin-top:120px;
+  padding:40px 32px 60px;
+  border-top:1px solid var(--rule);
+  background:var(--paper-2);
+}
+.apx-foot-inner{
+  max-width:1240px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:flex-start;
+  gap:40px;flex-wrap:wrap;
+}
+.apx-foot-brand{display:flex;align-items:center;gap:14px}
+.apx-foot-meta{font-size:12px;color:var(--ink-3);line-height:1.7;max-width:440px}
+.apx-foot-meta a{color:var(--accent);border-bottom:1px solid var(--rule)}
+
+/* ==================== UTIL ==================== */
+.mono{font-family:var(--mono)}
+.serif{font-family:var(--serif)}
+.pos{color:var(--pos)}
+.neg{color:var(--neg)}
+.dim{color:var(--ink-3)}
+.dimmer{color:var(--ink-4)}
+.accent{color:var(--accent)}
+
+/* ==================== MOBILE ==================== */
+@media(max-width:820px){
+  .apx-nav-inner{padding:14px 20px;gap:16px;flex-wrap:wrap}
+  .apx-nav-links a{padding:6px 10px;font-size:12px}
+  .container{padding:0 20px}
+  .apx-foot-inner{padding:0 20px}
+}

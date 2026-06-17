@@ -4,13 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The full 29-year backtest of the Mīzān rules-based strategy (1996–2024): method, risk decomposition, year-by-year returns, and an honest list of caveats. By Abdulmajid Al Qurashi.">
-<link rel="canonical" href="https://themizan.capital/results.html">
+<link rel="canonical" href="https://themizan.capital/results">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Mīzān">
 <meta property="og:title" content="Mīzān · Backtest Report (1996–2024)">
 <meta property="og:description" content="The full 29-year backtest: method, risk decomposition, year-by-year returns, and an honest list of caveats. By Abdulmajid Al Qurashi.">
-<meta property="og:url" content="https://themizan.capital/results.html">
-<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://themizan.capital/results">
+<meta property="og:image" content="https://themizan.capital/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://themizan.capital/assets/og-cover.png">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="ar_SA">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%231f4d3a'/%3E%3Ctext%20x='16'%20y='23'%20font-size='20'%20text-anchor='middle'%20fill='%23f4f1ea'%20font-family='Georgia,serif'%3EM%3C/text%3E%3C/svg%3E">
@@ -508,17 +512,17 @@ a{color:inherit;text-decoration:none}
 
 <nav class="apx-nav">
   <div class="apx-nav-inner">
-    <a href="index.html" class="apx-brand">
+    <a href="/" class="apx-brand">
   <span class="apx-brand-ar" dir="rtl" lang="ar">ميزان</span>
   <span class="apx-brand-latin">Mizan</span>
   <span class="apx-brand-meta">themizan.capital</span>
 </a>
     <div class="apx-nav-links">
-      <a href="index.html">Home</a>
-      <a href="story.html">Story</a>
-      <a href="results.html" class="active">Results</a>
-      <a href="dashboard.html">Live Ledger</a>
-      <a href="about.html">About</a>
+      <a href="/">Home</a>
+      <a href="/story">Story</a>
+      <a href="/results" class="active">Results</a>
+      <a href="/dashboard">Live Ledger</a>
+      <a href="/about">About</a>
     </div>
   </div>
 </nav>
@@ -1282,7 +1286,7 @@ a{color:inherit;text-decoration:none}
       <div class="prov-row"><div class="prov-k">Benchmark</div><div class="prov-v">S&amp;P 500 total return index (SPX with dividend reinvestment), 1 April to 1 April windows identical to Mīzān&rsquo;s holding period.</div></div>
       <div class="prov-row"><div class="prov-k">Holding-period convention</div><div class="prov-v">Each return is the simple price return from 1 April close to 1 April close of the following year, dividends reinvested. No mid-year marks; no intra-year drawdown observation.</div></div>
       <div class="prov-row"><div class="prov-k">Selection mechanics</div><div class="prov-v">Proprietary. Methodology disclosed structurally in &sect;&nbsp;01 and the universe floor by era is disclosed in &sect;&nbsp;09. Ranking weights, factor thresholds, and regime triggers are not published. The standard disclosure boundary for a private quantitative system.</div></div>
-      <div class="prov-row"><div class="prov-k">Live verification</div><div class="prov-v">Year One picks were timestamped on 1 April 2025 and the closing returns are verifiable against public price history. The audit window opens with Year One on the live <a href="dashboard.html" style="color:var(--accent);border-bottom:1px solid var(--rule-2)">ledger</a>.</div></div>
+      <div class="prov-row"><div class="prov-k">Live verification</div><div class="prov-v">Year One picks were timestamped on 1 April 2025 and the closing returns are verifiable against public price history. The audit window opens with Year One on the live <a href="/dashboard" style="color:var(--accent);border-bottom:1px solid var(--rule-2)">ledger</a>.</div></div>
       <div class="prov-row"><div class="prov-k">Reproducibility</div><div class="prov-v">Every figure on this page is derived from the published return series and the provenance described above. The arithmetic is reproducible from those inputs.</div></div>
     </div>
   </div>
@@ -1309,7 +1313,7 @@ a{color:inherit;text-decoration:none}
       </ul>
     </div>
     <div class="big-note" style="margin-top:40px">
-      <strong>How to read the live experiment in light of these caveats:</strong> the live portfolio starting April 2025 uses the identical selection rules, with actual capital deployed by the author, and cannot be cherry-picked after the fact. Year One closed at <strong>+68.92%</strong> versus the S&amp;P 500's <strong>+16.80%</strong> for the same window &mdash; above the rule's historical median (+59.71%), below the mean (+83.99% &mdash; pulled by the +394.5% recovery vintage of 2020). Inside the distribution, not above it. Year Two is now under way; a live record of follow-on years is what the live <a href="dashboard.html" style="color:var(--accent);border-bottom:1px solid var(--rule-2)">ledger</a> exists to compile. Whatever the backtest's flaws, the live record corrects them in real time.
+      <strong>How to read the live experiment in light of these caveats:</strong> the live portfolio starting April 2025 uses the identical selection rules, with actual capital deployed by the author, and cannot be cherry-picked after the fact. Year One closed at <strong>+68.92%</strong> versus the S&amp;P 500's <strong>+16.80%</strong> for the same window &mdash; above the rule's historical median (+59.71%), below the mean (+83.99% &mdash; pulled by the +394.5% recovery vintage of 2020). Inside the distribution, not above it. Year Two is now under way; a live record of follow-on years is what the live <a href="/dashboard" style="color:var(--accent);border-bottom:1px solid var(--rule-2)">ledger</a> exists to compile. Whatever the backtest's flaws, the live record corrects them in real time.
     </div>
   </div>
 </section>
@@ -1323,7 +1327,7 @@ a{color:inherit;text-decoration:none}
     </div>
     <div class="apx-foot-meta">
       Mīzān is a personal investment-research record published by Abdulmajid Al Qurashi for informational purposes only. It is not investment advice, not a solicitation, and not a recommendation to buy, sell, or hold any security. The author is not a licensed financial adviser, and this site is not a regulated financial product. There is nothing for sale and nothing to subscribe to. Past performance &mdash; whether backtested or realised &mdash; is not indicative of future results, and all investing carries risk, including the loss of principal. Anyone making investment decisions should consult a qualified, licensed professional in their own jurisdiction. The live record reflects only the author's own capital and his own decisions. <br><br>
-      <a href="story.html">Story</a> &middot; <a href="dashboard.html">Live Ledger</a> &middot; <a href="mailto:research@themizan.capital">research@themizan.capital</a>
+      <a href="/story">Story</a> &middot; <a href="/dashboard">Live Ledger</a> &middot; <a href="mailto:research@themizan.capital">research@themizan.capital</a>
     </div>
   </div>
 </footer>

@@ -1,0 +1,32 @@
+# Redirect the old .html URLs to the clean canonical URLs (301 = permanent).
+# This consolidates duplicate URLs so Google indexes one version per page.
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/story.html"
+  to = "/story"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/results.html"
+  to = "/results"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dashboard.html"
+  to = "/dashboard"
+  status = 301
+  force = true
